@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Ingredients</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  input[type="text"] {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+  }
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1> Ingredients</h1>
+  <form id="ingredients-form">
+    <input type="text" id="ingredient" name="ingredient" placeholder="Enter an ingredient" required>
+    <button type="submit">Add Ingredient</button>
+  </form>
+</div>
+
+<script>
+document.getElementById('ingredients-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+  
+  var ingredient = document.getElementById('ingredient').value;
+  
+  // Here you can handle the ingredient, e.g., add it to a list or send it to a server
+  
+  alert('Ingredient Added: ' + ingredient);
+  
+  // Clear the input
+  document.getElementById('ingredient').value = '';
+});
+</script>
+
+</body>
+</html>
